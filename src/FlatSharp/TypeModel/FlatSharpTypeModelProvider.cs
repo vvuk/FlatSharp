@@ -76,6 +76,14 @@ public class FlatSharpTypeModelProvider : ITypeModelProvider
                 typeModel = new IndexedVectorTypeModel(type, container);
                 return true;
             }
+
+#if NETSTANDARD2_1 || NET5_0_OR_GREATER
+            if (genericDef == FlatSharpUnityHelpers.NativeArrayType)
+            {
+                typeModel = new UnityNativeArrayVectorTypeModel(type, container);
+                return true;
+            }
+#endif
         }
 
         if (typeof(IFlatBufferUnion).IsAssignableFrom(type))

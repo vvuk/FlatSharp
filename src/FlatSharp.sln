@@ -31,6 +31,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark.5.0.0", "Benchmar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark.6.0.0", "Benchmarks\Benchmark.6.0.0\Benchmark.6.0.0.csproj", "{F9C48012-AB11-4541-911C-BAF2B0B1158B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatSharp.Runtime.Unity", "FlatSharp.Runtime.Unity\FlatSharp.Runtime.Unity.csproj", "{147EB925-01B5-4F7D-9F21-2AD6504E3667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatSharp.Unity", "FlatSharp.Unity\FlatSharp.Unity.csproj", "{94FF5949-AE03-4C47-B111-D9F16887A554}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,14 @@ Global
 		{F9C48012-AB11-4541-911C-BAF2B0B1158B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9C48012-AB11-4541-911C-BAF2B0B1158B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9C48012-AB11-4541-911C-BAF2B0B1158B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147EB925-01B5-4F7D-9F21-2AD6504E3667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147EB925-01B5-4F7D-9F21-2AD6504E3667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147EB925-01B5-4F7D-9F21-2AD6504E3667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147EB925-01B5-4F7D-9F21-2AD6504E3667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94FF5949-AE03-4C47-B111-D9F16887A554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FF5949-AE03-4C47-B111-D9F16887A554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FF5949-AE03-4C47-B111-D9F16887A554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FF5949-AE03-4C47-B111-D9F16887A554}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

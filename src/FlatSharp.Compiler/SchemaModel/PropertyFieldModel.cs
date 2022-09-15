@@ -319,6 +319,7 @@ public record PropertyFieldModel
             VectorType.Memory => $"Memory<{innerType}>",
             VectorType.ReadOnlyMemory => $"ReadOnlyMemory<{innerType}>",
             VectorType.IIndexedVector => $"IIndexedVector<{keyType ?? "string"}, {innerType}>",
+            VectorType.NativeArray => $"Unity.Collections.NativeArray<{innerType}>",
             _ => throw new FlatSharpInternalException("Unknown vector kind: " + this.Attributes.VectorKind),
         };
     }

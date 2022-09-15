@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2020 James Courtney
+ * Copyright 2022 Unity Technologies
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-namespace FlatSharp.Compiler;
+using System;
+using Microsoft.CodeAnalysis;
+using Unity.Collections;
 
-/// <summary>
-/// Enumerates supported vector types.
-/// </summary>
-public enum VectorType
+namespace FlatSharp;
+
+public static class FlatSharpUnityHelpers
 {
-    IList,
-    IReadOnlyList,
-    Array,
-    Memory,
-    ReadOnlyMemory,
-    IIndexedVector,
-    NativeArray,
+    public static PortableExecutableReference AssemblyReferenceUnityNativeArray()
+    {
+        return MetadataReference.CreateFromFile(typeof(NativeArray<>).Assembly.Location);
+    }
+
+    public static Type NativeArrayType => typeof(NativeArray<>);
 }

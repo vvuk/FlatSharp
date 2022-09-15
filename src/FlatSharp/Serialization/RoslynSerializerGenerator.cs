@@ -345,6 +345,9 @@ $@"
             MetadataReference.CreateFromFile(typeof(InvalidDataException).Assembly.Location),
             MetadataReference.CreateFromFile(typeof(ReadOnlyDictionary<,>).Assembly.Location),
             MetadataReference.CreateFromFile(typeof(Unsafe).Assembly.Location),
+#if NETSTANDARD2_1 || NET5_0_OR_GREATER
+            FlatSharpUnityHelpers.AssemblyReferenceUnityNativeArray(),
+#endif
         });
 
         return references;

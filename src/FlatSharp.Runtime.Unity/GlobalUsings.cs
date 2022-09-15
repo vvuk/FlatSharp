@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright 2020 James Courtney
+ * Copyright 2022 Unity Technologies
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
-namespace FlatSharp.Compiler;
+global using System;
+global using System.Collections;
+global using System.Collections.Generic;
+global using System.ComponentModel;
+global using System.Diagnostics;
+global using System.Diagnostics.CodeAnalysis;
+global using System.Reflection;
+global using System.Runtime.CompilerServices;
 
-/// <summary>
-/// Enumerates supported vector types.
-/// </summary>
-public enum VectorType
-{
-    IList,
-    IReadOnlyList,
-    Array,
-    Memory,
-    ReadOnlyMemory,
-    IIndexedVector,
-    NativeArray,
-}
+global using FlatSharp.Internal;
+
+global using Unity.Collections;
+global using Unity.Collections.LowLevel.Unsafe;
+
