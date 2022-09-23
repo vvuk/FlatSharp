@@ -78,11 +78,17 @@ public class FlatSharpTypeModelProvider : ITypeModelProvider
             }
 
 #if NETSTANDARD2_1 || NET5_0_OR_GREATER
+            if (genericDef.Name == "Unity.Collections.NativeArray`1")
+            {
+                throw new InvalidFlatBufferDefinitionException($"Type '{CSharpHelpers.GetCompilableTypeName(type)}' uses a Unity.Collections.NativeArray, which is only supported via the AOT/Compiler path.");
+            }
+#if false
             if (genericDef == FlatSharpUnityHelpers.NativeArrayType)
             {
                 typeModel = new UnityNativeArrayVectorTypeModel(type, container);
                 return true;
             }
+#endif
 #endif
         }
 

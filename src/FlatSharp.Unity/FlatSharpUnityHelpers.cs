@@ -16,7 +16,6 @@
 
 using System;
 using Microsoft.CodeAnalysis;
-using Unity.Collections;
 
 namespace FlatSharp;
 
@@ -24,8 +23,8 @@ public static class FlatSharpUnityHelpers
 {
     public static PortableExecutableReference AssemblyReferenceUnityNativeArray()
     {
-        return MetadataReference.CreateFromFile(typeof(NativeArray<>).Assembly.Location);
+        return MetadataReference.CreateFromFile(typeof(FlatSharpUnityHelpers).Assembly.Location);
     }
 
-    public static Type NativeArrayType => typeof(NativeArray<>);
+    //public static Type NativeArrayType => typeof(NativeArray<>);
 }
